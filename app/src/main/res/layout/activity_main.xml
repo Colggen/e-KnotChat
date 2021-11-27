@@ -5,35 +5,64 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="8dp"
+    android:background="#fff"
     android:theme="@style/Theme.MaterialComponents.Light"
     app:cardElevation="8dp"
     android:layout_margin="16dp"
     app:contentPadding="16dp">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#fff"
         android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:scaleType="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/iconimage"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Введите ваш домашний адрес"
+            android:textStyle="bold"
+            android:textColor="@color/colorBlue"
+            android:textSize="22sp"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             app:errorEnabled="true"
+            android:layout_marginTop="10dp"
             app:endIconMode="custom"
-            app:boxStrokeColor="@color/colorGreen"
-            app:hintTextColor="@color/colorGreen"
+            app:boxStrokeColor="@color/colorBlue"
+            app:hintTextColor="@color/colorBlue"
             app:startIconDrawable="@drawable/ic_baseline_person_24">
 
 
             <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/stgroup"
+                android:id="@+id/adress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="none" />
 
         </com.google.android.material.textfield.TextInputLayout>
-
+        
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nextBt"
+            android:textSize="16sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/colorBlue"
+            android:text="Продолжить"/>
 
 
     </LinearLayout>

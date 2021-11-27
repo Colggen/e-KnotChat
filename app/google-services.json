@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "948964609862",
+    "firebase_url": "https://eknotfirebasechat-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "eknotfirebasechat",
+    "storage_bucket": "eknotfirebasechat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:948964609862:android:92f608dae1e712855ddf47",
+        "android_client_info": {
+          "package_name": "com.example.e_knotchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "948964609862-n5vua8b4q1stirk8s82tg047vk1hui8l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFYsweBt4rh41KT8PF2Gi6Bj8BiRYWlL0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "948964609862-n5vua8b4q1stirk8s82tg047vk1hui8l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
