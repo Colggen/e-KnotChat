@@ -3,6 +3,7 @@ package com.example.e_knotchat;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import android.content.DialogInterface;
@@ -26,6 +27,9 @@ import java.util.Iterator;
 import java.util.Set;
 
 public class SecondActivity extends AppCompatActivity {
+    private static final int TYPE_COUNT = 2;
+    private static final int TYPE_ITEM_COLORED = 1;
+    private static final int TYPE_ITEM_NORMAL = 0;
 
     ListView lvDiscussionTopics;
     ArrayList<String> listOfDiscussion = new ArrayList<String>();
@@ -41,7 +45,7 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
         Intent intent = getIntent();
         String group = intent.getStringExtra("adress");
-
+        
         lvDiscussionTopics = (ListView) findViewById(R.id.lvDiscussionTopics);
         arrayAdpt = new ArrayAdapter(this,
                 android.R.layout.simple_list_item_1, listOfDiscussion);
@@ -49,6 +53,8 @@ public class SecondActivity extends AppCompatActivity {
 
 
         getUserName();
+
+
 
 
         dbr.addValueEventListener(new ValueEventListener() {
@@ -60,6 +66,7 @@ public class SecondActivity extends AppCompatActivity {
                 while(i.hasNext()){
                     set.add(((DataSnapshot)i.next()).getKey());
                 }
+
 
                 arrayAdpt.clear();
                 arrayAdpt.addAll(group);
@@ -84,6 +91,7 @@ public class SecondActivity extends AppCompatActivity {
             }
         });
     }
+
 
     private void getUserName(){
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
